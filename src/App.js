@@ -30,7 +30,7 @@ function App() {
 
   return (
     <Router>
-        <main className={settings.factionSelected == 1 || settings.factionSelected == 0 ? 'mainR' : 'mainD'}>
+        <main className={settings.factionSelected === 1 || settings.factionSelected === 0 ? 'mainR' : 'mainD'}>
         <Header />
         <Route exact path="/">
             <Accueil />
@@ -68,10 +68,10 @@ function App() {
                 },
                 particles: {
                     color: {
-                        value: settings.factionSelected == 1 || settings.factionSelected == 0 ? "#ffd000" : "#ff0015",
+                        value: settings.factionSelected === 1 || settings.factionSelected === 0 ? "#ffd000" : "#ff0015",
                     },
                     links: {
-                        color: settings.factionSelected == 1 || settings.factionSelected == 0 ? "#ffd000": "#ff0015",
+                        color: settings.factionSelected === 1 || settings.factionSelected === 0 ? "#ffd000": "#ff0015",
                         distance: 0,
                         enable: false,
                         opacity: 0.5,
@@ -101,7 +101,7 @@ function App() {
                         type: "circle",
                     },
                     size: {
-                        value: { min: 1, max: settings.factionSelected == 1 || settings.factionSelected == 0 ? 5: 5 },
+                        value: { min: 0.5, max: settings.factionSelected === 1 || settings.factionSelected === 0 ? 3: 3 },
                     },
                 },
                 detectRetina: true,
