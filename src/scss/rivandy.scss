@@ -1,0 +1,364 @@
+
+@font-face{
+    font-family: 'normal';
+    src: url('../font/Rubik-Medium.ttf');
+  }
+  @font-face{
+    font-family: 'bold';
+    src: url('../font/Rubik-Bold.ttf');
+  }
+  @font-face{
+    font-family: 'black';
+    src: url('../font/Rubik-Black.ttf');
+  }
+
+  @font-face{
+    font-family: 'italic';
+    src: url('../font/Rubik-Italic.ttf');
+  }
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+}
+
+body{
+    background-color: black;
+}
+main{
+    z-index: 0;
+}
+
+.mainR{
+    background: linear-gradient(#000000 0 75%, #422e03);;
+
+}
+.mainD{
+    background: linear-gradient(#000000 0 75%, #420303);;
+}
+.flex{
+    display: flex;
+}
+.column{
+    flex-direction: column;
+}
+
+*{
+font-family: normal;
+}
+
+button{
+    background-color: initial;
+    border: none;
+    color: white;
+}
+
+p{
+    color: white;
+}
+
+
+header{
+    #m-right{
+        article{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+    #avatarImg{
+        border: 3px solid white;
+        border-radius: 60px;
+    }
+    #avatarName{
+        text-decoration: none;
+        color: white;
+        text-align: center;
+        position: relative;
+        top: 1em;
+    }
+    ul{
+        list-style-type: none;
+    }
+}
+
+#menu-rivandy{
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    top: 2em;
+    display: flex;
+    padding: 1em;
+    #m-left{
+        margin-left: 3em;
+        #rivandy-logo, #rivandy-logoD{
+            width: 300px;
+        }
+        #rivandy-logo:hover{
+            animation: effetRivandy 2s ease-in-out infinite alternate;
+        }
+        #rivandy-logoD:hover{
+            animation: effetRivandyD 2s ease-in-out infinite alternate;
+        }
+    }
+    #m-center{
+        align-self: center;
+        justify-content: center;
+        margin: auto;
+        ul{
+            display: flex;
+            justify-content: center;
+            a{
+                text-decoration: none;
+                padding: 2em;
+                margin: 1em;
+                color: white;
+            }
+            a:hover{
+                color: gold;
+            }
+            #selected{
+                color: gold;
+                text-decoration: underline;
+            }
+        }
+
+    }
+
+    #m-right{
+
+        align-self: center;
+        margin-left: auto;
+        margin-right: 5em;
+        #steam-link{ 
+            padding: 1em;
+            #steam-icon{
+            width: 200px;
+            }
+        }
+    }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    > section{
+        position: relative;
+        height: 100vh;
+
+        #bg-1, #bg-2{
+            top: 0; right: 0;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: opacity(0.7);
+            z-index: -1;
+        }
+        .explore-section{
+            position: absolute;
+            bottom: 10em;
+            left: 5em;
+            button{
+                position: relative;
+                p{
+                    position: absolute;
+                    width: 100%;
+                    text-align: center;
+                    bottom: 0.7em;
+                    left: 0;
+                    font-size: 1.3em;
+                    text-decoration: none;
+                    color: white;
+                }
+            }
+    
+        }
+        .aside-small{
+            color: white;
+            width: 400px;
+        }
+    }
+}
+
+#main-section{
+    position: relative;
+}
+
+#explore-img, #selected-explore-img{
+    width: 236px;
+    height: 76px;
+    background-size: cover;
+    background-position: center;
+    background-image: url('../img/button.png');
+    position: relative;
+}
+#explore-img:hover, #selected-explore-img{
+    background-image: url('../img/button-h.png');
+    animation: effetLogo 1s both;
+}
+#explore-img:hover p{
+    color: gold!important;
+}
+#selected-explore-p{
+    color: gold!important;
+}
+
+@keyframes effetLogo{
+    from{
+      transform: translate(0, 0) rotate3d(1, 1, 1, 0deg);
+    }
+    to{
+      transform: translate(50px, 0) rotate3d(1, 1, 1, 0deg);
+    }
+  }
+
+  @keyframes effetRivandy{
+    from{
+      filter: drop-shadow(0px 0px 0px #ffc64b);
+    }
+    to{
+        filter: drop-shadow(0px 0px 20px #fffb00);
+    }
+  }
+
+  @keyframes effetRivandyD{
+    from{
+      filter: drop-shadow(0px 0px 0px #ff4b4b);
+    }
+    to{
+        filter: drop-shadow(0px 0px 20px #ff0800);
+    }
+  }
+
+
+  #video-wrapper{
+    position: absolute;
+    right: 15em;
+    bottom: 10em;
+    width: 960px;
+    > * {
+        border: 3px solid white;
+        iframe{
+            pointer-events: none;
+            opacity: 0;
+        }
+    }
+  }
+
+#rivandy-circle-logo, #dechys-logo{
+    width: 250px;
+}
+
+#faction-section > .explore-section{
+    img{
+        display: block;
+        margin: auto;
+    }
+    bottom: 5em;
+    .aside-dechys{
+        p{
+            font-family: normal;
+        }
+    }
+    h2{
+        position: relative;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        color: grey;
+    }
+    p{
+        opacity: 0;
+    }
+}
+
+@keyframes apparition {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  .apparition {
+    animation: apparition 2s ease-in forwards;
+  }
+
+
+#moreVideo{
+    aside{
+        margin: auto;
+    }
+    #video1, #video2, #video3{
+        border: 3px solid white;
+        > *{
+            border: none;
+        }
+    }
+    #video2, #video3{
+        position: relative;
+        top: 6em;
+        right: 2.5em;
+    }
+    #video3{
+        top: 7em;
+    }
+}
+
+footer{
+    display: flex;
+    padding: 1em;
+    position: relative;
+    margin-top: 1em;
+
+    #left{
+        margin-left:auto;
+    }
+
+    #smallLogo{
+        width: 75px;
+        position: relative;
+    }
+    ul{
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-right: auto;
+    }
+    li{
+        padding: 0.2em;
+        margin: 0.3em;
+    }
+    a{
+        color: white;
+    }
+    p{
+        text-align: center;
+        color: gold;
+    }
+    img{
+        margin: auto;
+    }
+}
+
+  
+.dechys-color{
+    color: #ff0015!important;
+}
+.rivandy-color{
+    color: #ffd700!important;
+}
+.selected-link{
+    text-decoration: underline!important;
+}
+.dark{
+    filter:hue-rotate(-30deg)!important;
+}
+
