@@ -10,7 +10,7 @@ const FooterRivandy = () => {
 
     <footer>
         <section id="left" className='flex column'>
-            <img id="smallLogo" src="./img/rivandy-s.png"></img>
+            <img id="smallLogo" src="/img/rivandy-s.png"></img>
             <p>Rivandy 2023</p>
         </section>
         <ul id="center">

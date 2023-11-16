@@ -1,9 +1,10 @@
 import './scss/rivandy.scss';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import {useSelector } from 'react-redux';
 import Bounce from 'react-reveal/Bounce';
 import { Link } from 'react-router-dom/cjs/react-router-dom';
 import { useLocation } from 'react-router-dom';
+import axios from 'axios';
 
 
 function Header() {
@@ -11,6 +12,7 @@ function Header() {
   const location = useLocation();
   const { pathname } = location;
   const settings = useSelector(state => state);
+
 
   return (
         <header id="menu-rivandy">
@@ -24,8 +26,8 @@ function Header() {
             <ul>
               <li><Link className={pathname === '/' ? ((settings.factionSelected === 1 || settings.factionSelected === 0 ? 'rivandy-color':'dechys-color') + ' selected-link') : null} to="/">Home</Link></li>
               <li><Link className={pathname === '/universe' ? ((settings.factionSelected === 1 || settings.factionSelected === 0 ? 'rivandy-color':'dechys-color') + ' selected-link') : null} to="/universe">Universe</Link></li>
-              <li><Link className={pathname === '/news' ? ((settings.factionSelected === 1 || settings.factionSelected === 0 ? 'rivandy-color':'dechys-color') + ' selected-link') : null} to="/news">News</Link></li>
-              <li><Link className={pathname === '/downloads' ? ((settings.factionSelected === 1 || settings.factionSelected === 0 ? 'rivandy-color':'dechys-color') + ' selected-link') : null} to="/downloads">Download</Link></li>
+              <li><Link className={pathname === '/news' ? ((settings.factionSelected === 1 || settings.factionSelected === 0 ? 'rivandy-color':'dechys-color') + ' selected-link') : 'disabled-link'} to="/">News</Link></li>
+              <li><Link className={pathname === '/downloads' ? ((settings.factionSelected === 1 || settings.factionSelected === 0 ? 'rivandy-color':'dechys-color') + ' selected-link') : 'disabled-link'} to="/">Download</Link></li>
             </ul>
           </section>
 

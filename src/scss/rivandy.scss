@@ -365,6 +365,9 @@ footer{
 .selected-link{
     text-decoration: underline!important;
 }
+.disabled-link{
+    color: gray!important;
+}
 .dark{
     filter:hue-rotate(-30deg)!important;
 }
