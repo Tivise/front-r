@@ -82,6 +82,9 @@ header{
     }
     ul{
         list-style-type: none;
+        padding: 0;
+        margin: 0;
+        margin-top: 2em;
     }
 }
 
@@ -539,6 +542,9 @@ footer{
     main > section .explore-section{
         left: 0;
         font-size: 0.9em;
+    }
+    #menu-rivandy{
+        padding: 0;
     }
 }
 @media screen and (max-width: 600px) {
