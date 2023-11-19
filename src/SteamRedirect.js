@@ -51,10 +51,10 @@ function SteamRedirect() {
       handleChangeSteamID(userInfo);
       axios.defaults.headers.common['Authorization'] = `Bearer ${response.data.token}`;
 
-      axios.get('https://rivandy.com:3003/game/GetGameUserInformation?steamID='+response.data.steamid)
-      .then((response) => console.log(response))
-      .catch((error) => {
-        console.log(error);
+      axios.get('https://rivandy.com:3003/game/GetGameUserInformation')
+      .then((response2) => console.log(response2))
+      .catch((error2) => {
+        console.log(error2);
       })
 
       setRedirect(true);

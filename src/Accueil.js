@@ -4,11 +4,9 @@ import Video from './Video';
 import Faction from './Faction';
 import {useSelector } from 'react-redux';
 import Fade from 'react-reveal/Fade';
-import Bounce from 'react-reveal/Bounce';
 import Zoom from 'react-reveal/Zoom';
 import Jump from 'react-reveal/Jump';
 import MoreVideo from './MoreVideo';
-import FooterRivandy from './FooterRivandy';
 
 function Accueil() {
 
