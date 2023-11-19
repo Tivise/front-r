@@ -422,3 +422,135 @@ footer{
     border-top-left-radius: 250px;
     border-bottom-right-radius: 250px;
 }
+
+
+@media screen and (max-width: 1650px) {
+    #video-wrapper{
+        right: 3em;
+    }
+    #moreVideo #video2, #moreVideo #video3{
+        right: 0;
+        position: relative;
+    }
+    .moreVideoAside {
+        bottom: 9em;
+        position: relative;
+    }
+
+}
+
+@media screen and (max-width: 1300px) {
+    #menu-rivandy{
+        flex-direction: column;
+        #m-left, #m-center{
+            margin: auto;
+        }
+        #m-right{
+            margin: initial;
+            position: absolute;
+            top: 0;
+            right: 3em;
+        }
+    }
+    .firstVideoAside{
+        display: none;
+    }
+    .moreVideoAside{
+        position: relative;
+        top: -9em;
+    }
+
+    #video-wrapper {
+        width: 480px;
+        z-index: 1;
+    }
+}
+
+@media screen and (max-width: 850px) {
+    #menu-rivandy{
+        #m-left{
+            margin: initial;
+            position: relative;
+            top: -2.5em;
+            left: 5em;
+        }
+        #m-center ul {
+            flex-wrap: wrap;
+            li{
+                padding: 1em;
+            }
+        }
+
+        #rivandy-logo, #rivandy-logoD{
+            width: 200px;
+        }
+    }
+    .lastAsidePreview{
+        position: relative;
+        top: 1.5em;
+    }
+    main .separator {
+        margin-top: 20em;
+    }
+
+    #universe-section{
+        img{
+            width: 100%;
+        }
+        width: initial;
+        font-size: 0.7em;
+    }
+
+    #faction-section > .explore-section{
+        bottom: 10em;
+    }
+    #explore-img{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #menu-rivandy{
+        flex-direction: column-reverse;
+        #m-left{
+            display: none;
+        }
+        #m-right{
+            position: relative;
+            margin: auto;
+            right: 0;
+        }
+    }
+    main > section:not(.maxHeight) {
+        height: initial;
+    }
+}
+
+@media screen and (max-width: 665px) {
+    #moreVideo{
+        display: none;
+    }
+    main > section{
+        .aside-small {
+            padding: 2em;
+            width: initial;
+        }
+    }
+    main > section .explore-section{
+        left: 0;
+        font-size: 0.9em;
+    }
+}
+@media screen and (max-width: 600px) {
+    #main-section{
+        #video-wrapper{
+            display: none;
+        }
+        .explore-section{
+            display: none;
+        }
+    }
+    main > section {
+        min-height: 600px;
+    }
+}

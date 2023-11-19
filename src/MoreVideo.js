@@ -14,7 +14,7 @@ const MoreVideo = () => {
 
     <section id="moreVideo">
             <article className='flex'>
-              <aside>
+              <aside className='firstVideoAside'>
               <video
                 id="preview-video"
                 width="640"
@@ -31,13 +31,13 @@ const MoreVideo = () => {
                 Votre navigateur ne prend pas en charge la lecture de la vidéo.
               </video>
               </aside>
-              <aside className='flex column'>
+              <aside className='moreVideoAside flex column'>
                 <article id="video2"><VideoPlayer videoId={youtubeVideo2Id} isAutoPlay={false}  width={640} height={360} /></article>
                 <article id="video3"><VideoPlayer videoId={youtubeVideo3Id} isAutoPlay={false}  width={640} height={360} /></article>
               </aside>
             </article>
             <article className="explore-section">
-                <aside>
+                <aside className='lastAsidePreview'>
                 <h2 className={settings.factionSelected === 1 || settings.factionSelected === 0 ? 'rivandy-color':'dechys-color'}><Zoom right cascade>More videos...</Zoom></h2>
                 <p>Discover Rivandy by watching the latest game videos and feel free to join our social networks!</p>
                 </aside>
