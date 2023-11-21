@@ -26,6 +26,7 @@ function Header() {
             <ul>
               <li><Link className={pathname === '/' ? ((settings.factionSelected === 1 || settings.factionSelected === 0 ? 'rivandy-color':'dechys-color') + ' selected-link') : null} to="/">Home</Link></li>
               <li><Link className={pathname === '/universe' ? ((settings.factionSelected === 1 || settings.factionSelected === 0 ? 'rivandy-color':'dechys-color') + ' selected-link') : null} to="/universe">Universe</Link></li>
+              <li><Link className={pathname === '/ranking' ? ((settings.factionSelected === 1 || settings.factionSelected === 0 ? 'rivandy-color':'dechys-color') + ' selected-link') : null} to="/ranking">Ranking</Link></li>
               <li><Link className={pathname === '/news' ? ((settings.factionSelected === 1 || settings.factionSelected === 0 ? 'rivandy-color':'dechys-color') + ' selected-link') : 'disabled-link'} to="/">News</Link></li>
               <li><Link className={pathname === '/downloads' ? ((settings.factionSelected === 1 || settings.factionSelected === 0 ? 'rivandy-color':'dechys-color') + ' selected-link') : 'disabled-link'} to="/">Download</Link></li>
             </ul>

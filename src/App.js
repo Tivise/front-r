@@ -13,6 +13,7 @@ import { useCallback } from "react";
 import { loadSlim } from "tsparticles-slim";
 import MoreVideo from './MoreVideo';
 import Universe from './Universe';
+import Ranking from './Ranking';
 
 function App() {
 
@@ -40,6 +41,9 @@ function App() {
         </Route>
         <Route path="/universe">
             <Universe />
+        </Route>
+        <Route path="/ranking">
+            <Ranking />
         </Route>
         <FooterRivandy></FooterRivandy>
         <Particles

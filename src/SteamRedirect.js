@@ -47,7 +47,6 @@ function SteamRedirect() {
     })
     .then((response) => {
       const userInfo = response.data;
-      console.log(userInfo);
       handleChangeSteamID(userInfo);
       axios.defaults.headers.common['Authorization'] = `Bearer ${response.data.token}`;
 
