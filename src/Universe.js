@@ -14,13 +14,11 @@ function Universe() {
 
 
     const settings = useSelector(state => state);
-  const [activeVideo, setVideoActive] = useState(false);
 
 
   return (
         [<section id="main-section" className='maxHeight separator'>
         <Fade><img id="bg-1" className={settings.factionSelected === 1 || settings.factionSelected === 0 ? null:'dark'} src="./img/bg2.png"></img></Fade>
-          {activeVideo ? <Video></Video> : null }
           <section id="universe-section">
             <img id="logo" src="./img/rivandy-s.png"></img>
             <h3>Battle royale - Dungeon Crawler - In a world of reincarnation, the circle of Rivandy protects innocent souls from the corrupt Dechys</h3>
