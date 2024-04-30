@@ -7,8 +7,6 @@ import Header from './Header';
 import FooterRivandy from './FooterRivandy';
 import Accueil from './Accueil';
 import SteamRedirect from './SteamRedirect';
-
-import Particles from "react-particles";
 import { useCallback } from "react";
 import { loadSlim } from "tsparticles-slim";
 import MoreVideo from './MoreVideo';
@@ -45,72 +43,6 @@ function App() {
         <Route path="/ranking">
             <Ranking />
         </Route>
-        <FooterRivandy></FooterRivandy>
-        <Particles
-            id="tsparticles"
-            init={particlesInit}
-            loaded={particlesLoaded}
-            options={{
-                fpsLimit: 120,
-                interactivity: {
-                    events: {
-                        onHover: {
-                            enable: true,
-                            mode: "repulse",
-                        },
-                        resize: true,
-                    },
-                    modes: {
-                        push: {
-                            quantity: 4,
-                        },
-                        repulse: {
-                            distance: 200,
-                            duration: 0.4,
-                        },
-                    },
-                },
-                particles: {
-                    color: {
-                        value: settings.factionSelected === 1 || settings.factionSelected === 0 ? "#ffd000" : "#ff0015",
-                    },
-                    links: {
-                        color: settings.factionSelected === 1 || settings.factionSelected === 0 ? "#ffd000": "#ff0015",
-                        distance: 0,
-                        enable: false,
-                        opacity: 0.5,
-                        width: 1,
-                    },
-                    move: {
-                        direction: "none",
-                        enable: true,
-                        outModes: {
-                            default: "bounce",
-                        },
-                        random: false,
-                        speed: 2,
-                        straight: false,
-                    },
-                    number: {
-                        density: {
-                            enable: true,
-                            area: 500,
-                        },
-                        value: 5,
-                    },
-                    opacity: {
-                        value: 0.8,
-                    },
-                    shape: {
-                        type: "circle",
-                    },
-                    size: {
-                        value: { min: 0.5, max: settings.factionSelected === 1 || settings.factionSelected === 0 ? 3: 3 },
-                    },
-                },
-                detectRetina: true,
-            }}
-        />
         </main>
     </Router>
   );

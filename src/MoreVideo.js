@@ -12,11 +12,10 @@ const MoreVideo = () => {
 
   return (
 
-    <section id="moreVideo">
+    <section id="moreVideo" >
             <article className='flex'>
               <aside className='firstVideoAside'>
               <video
-                id="preview-video"
                 width="640"
                 height="360"
                 preload="metadata"

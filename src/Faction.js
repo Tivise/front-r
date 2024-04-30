@@ -19,7 +19,7 @@ const Faction = () => {
 
 
   return (
-    <section id="faction-section" onClick={() => console.log(settings)}>
+    <section id="faction-section"  onClick={() => console.log(settings)}>
 
       <Fade spy={settings.factionSelected}><img id="bg-2" src={settings.factionSelected === 2 ? "./img/bgD.png" : settings.factionSelected === 1 ? "./img/bgR.png": "./img/bgR.png"}></img></Fade>
       <article className="explore-section">
